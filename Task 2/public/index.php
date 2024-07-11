@@ -4,7 +4,7 @@ require_once __DIR__ . "/../vendor/autoload.php";
 
 use Src\DiscountService;
 
-// Cour cart
+// Cart
 $shoppingCart = [
     ['product' => 'Телефон', 'price' => 1200],
     ['product' => 'Наушники', 'price' => 800],
