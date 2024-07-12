@@ -2,9 +2,11 @@
 
 namespace Src;
 
-class DiscountService
+use Src\Interfaces\DiscountInterface;
+
+class DiscountService implements DiscountInterface
 {
-    // Getting service
+    // Getting Total
     public function getTotal(array $cart): int
     {
         // Total price
