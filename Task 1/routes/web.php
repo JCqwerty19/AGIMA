@@ -13,9 +13,8 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
+// Route to show form page
+Route::get('/', 'FormController@index')->name('form.index');
 
-Route::get('/form', 'FormController@index')->name('form.index');
-Route::post('/form', 'FormController@data')->name('form.data');
+// Route to save form data in public/data.txt
+Route::post('/', 'FormController@data')->name('form.data');

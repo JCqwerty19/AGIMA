@@ -35,11 +35,14 @@ Form
                 <option value="2">2</option>
                 <option value="1">1</option>
             </select>
+            @error('rating')
+            <p class="text-danger">{{ $message }}</p>
+            @enderror
             <br><br>
 
             <label for="comment"></label>
             <textarea name="comment" id="comment" cols="30" rows="10">{{ old('comment') }}</textarea>
-            @error('email')
+            @error('comment')
             <p class="text-danger">{{ $message }}</p>
             @enderror
             <br>
@@ -48,7 +51,7 @@ Form
             <br>
 
             @if(session('success'))
-                {{ session('message') }}
+            <p class="text-success">{{ session('success') }}</p>
             @endif
             
         </div>

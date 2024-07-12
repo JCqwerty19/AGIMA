@@ -13,8 +13,10 @@ class FormService
         $this->formRepository = $formRepository;
     }
 
+    // Save data fucntion
     public function data(FormDataDTO $formData): bool
     {
+        // Create DTO to show params
         $dto = new FormDataDTO(
             username: $formData->username,
             email: $formData->email,
@@ -22,6 +24,7 @@ class FormService
             comment: $formData->comment,
         );
 
+        // Save data through repository
         return $this->formRepository->data($dto);
     }
 }
